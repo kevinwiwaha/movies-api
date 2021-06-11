@@ -12,8 +12,8 @@ app.use(express.json())
 app.use(pino)
 
 
+app.use('/',userRouter)
 app.use('/movies',movieRouter)
-app.use('/login',userRouter)
 
 
 app.listen(PORT,function(){
