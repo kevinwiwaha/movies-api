@@ -6,12 +6,14 @@ const pino = require('express-pino-logger')()
 
 
 const movieRouter = require('./routes/movieRouter')
+const userRouter = require('./routes/userRouter')
 
 app.use(express.json())
 app.use(pino)
 
 
 app.use('/movies',movieRouter)
+app.use('/login',userRouter)
 
 
 app.listen(PORT,function(){
