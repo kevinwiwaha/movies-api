@@ -38,8 +38,10 @@ const userVerify = (req,res,next) => {
                 jwt.verify(token.split(" ")[1],PRIVATE_KEY,function(err,user){
                     if(err) return res.status(401).json({err})
                     req.user = user
-                    next()
+                    return next()
                 })
+            }else if(token == null){
+                res.send(403)
             }
 }
 

@@ -34,11 +34,32 @@ module.exports = {
     getAll:async(req,res)=>{
         const movie = await Movie.findAll({raw:true})
         let imagePoster = []
-        movie.map(async(movie) => {
-            // let request = await axios.get(`http://www.omdbapi.com/?s=${movie.title}&apikey=aae0678a`)
-            imagePoster.push('req.Response')
-        })
+        for(i=0;i<movie.length;i++){
+            let data = await axios.get(`http://www.omdbapi.com/?s=${movie[i].title}&apikey=aae0678a`)
+            if("Error" in data.data){
+                const response = {
+                    title:movie[i].title,
+                    poster:data.data.Error
+                }
+                imagePoster.push(response)
+                
+                // break
+            }else if(data.data.Search[0] != null){
+                const response = {
+                    title:data.data.Search[0].Title,
+                    poster:data.data.Search[0].Poster
+                }
+                imagePoster.push(response)
+                
+            }
+            // imagePoster.push(data.data.Search[0].title)
+            // break
+
+        }
         console.log(imagePoster)
+        res.status(200).json({
+            result:imagePoster
+        })
     },
     create:async(req,res)=>{
         const user_id = req.user.id

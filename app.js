@@ -9,7 +9,7 @@ const movieRouter = require('./routes/movieRouter')
 const userRouter = require('./routes/userRouter')
 
 app.use(express.json())
-app.use(pino)
+// app.use(pino)
 
 
 app.use('/',userRouter)
