@@ -1,8 +1,24 @@
+<!-- #🎥 Favourite Movie API
+<hr>
+  Returns json data about a single user.
+## 📦 Installation
+* **Install Node Modules:**
 
-* **URL**
+  ```bash
+    npm install
+* **Setup .env :**
+
+  
+
+* **Run Server**
+  ```shell
+    npm run start
+<br>
+## 🎯 API -->
 
 
-###Login
+
+<!-- ###Login
   `POST` */login/*
   
 *  **Body**
@@ -34,9 +50,9 @@
 
   * **Code:** 403 Forbidden <br />
 ## 🎯 API
-* **URL**
+* **URL** -->
 
-<br>
+
 ###🟢Add movie to favourite list
   `POST` */movies/favourite*
   
