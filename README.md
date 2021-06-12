@@ -117,7 +117,7 @@ ___
             "msg": "Image poster not found"
         }
 
-
+___
 ### 🟢Get users favourite movie
   `GET` */movies/favourite*
 *  **Header**
