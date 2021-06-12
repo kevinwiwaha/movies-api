@@ -1,4 +1,4 @@
-<!-- #🎥 Favourite Movie API
+# 🎥Favourite Movie API
 <hr>
   Returns json data about a single user.
 ## 📦 Installation
@@ -8,17 +8,22 @@
     npm install
 * **Setup .env :**
 
-  
-
+  ```shell
+            PORT=5000
+            DB_HOSTNAME=localhost
+            DB_USERNAME= 
+            DB_PASSWORD= 
+            DB_NAME= 
+            PRIVATE_KEY=b1e0c2ef1081ef29b1614e4d428ba4d96f0a40adda93179c450f265a9d5e9fa7967959dff385375fde313aa41b2a282822784e243ca7a079989973cdc9ba88d0
 * **Run Server**
   ```shell
     npm run start
 <br>
-## 🎯 API -->
+## 🎯 API
 * **URL**
 
 
-###Login
+### Login
   `POST` */login/*
   
 *  **Body**
@@ -49,12 +54,11 @@
 * **Error Response:**
 
   * **Code:** 403 Forbidden <br />
-___
-## 🎯 API
-* **URL**
 
 
-###🟢Add movie to favourite list
+
+
+### Add movie to favourite list
   `POST` */movies/favourite*
   
 *  **Body**
@@ -83,9 +87,8 @@ ___
  
 * **Error Response:**
 
-  * **Code:** 403 Forbidden 
-___
-<!-- ###🟢Get movie poster -->
+  * **Code:** 403 Forbidden <br />
+### Get movie poster
   `GET` */movies/:movie-title*
 *  **Header**
     `Authorization: Bearer {your_token}`
@@ -116,9 +119,7 @@ ___
         {
             "msg": "Image poster not found"
         }
-
-___
-### 🟢Get users favourite movie
+### Get users favourite movie
   `GET` */movies/favourite*
 *  **Header**
     `Authorization: Bearer {your_token}`
@@ -144,5 +145,5 @@ ___
  
 * **Error Response:**
 
-  * **Code:** 403 Forbidden 
+  * **Code:** 403 Forbidden <br />
   
