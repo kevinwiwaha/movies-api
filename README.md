@@ -49,6 +49,7 @@
 * **Error Response:**
 
   * **Code:** 403 Forbidden <br />
+___
 ## 🎯 API
 * **URL**
 
@@ -83,7 +84,7 @@
 * **Error Response:**
 
   * **Code:** 403 Forbidden 
-
+___
 ###🟢Get movie poster
   `GET` */movies/:movie-title*
 *  **Header**
