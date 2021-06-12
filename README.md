@@ -15,10 +15,10 @@
     npm run start
 <br>
 ## 🎯 API -->
+* **URL**
 
 
-
-<!-- ###Login
+###Login
   `POST` */login/*
   
 *  **Body**
@@ -50,7 +50,7 @@
 
   * **Code:** 403 Forbidden <br />
 ## 🎯 API
-* **URL** -->
+* **URL**
 
 
 ###🟢Add movie to favourite list
