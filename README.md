@@ -8,13 +8,8 @@
     npm install
 * **Setup .env :**
 
-  ```shell
-    PORT=5000
-    DB_HOSTNAME=localhost
-    DB_USERNAME= #YOUR DATABASE USERNAME
-    DB_PASSWORD= #YOUR DATABASE PASSWORD
-    DB_NAME= #YOUR DATABASE NAME
-    PRIVATE_KEY=b1e0c2ef1081ef29b1614e4d428ba4d96f0a40adda93179c450f265a9d5e9fa7967959dff385375fde313aa41b2a282822784e243ca7a079989973cdc9ba88d0
+  
+
 * **Run Server**
   ```shell
     npm run start
