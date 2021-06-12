@@ -85,7 +85,7 @@ ___
 
   * **Code:** 403 Forbidden 
 ___
-###🟢Get movie poster
+<!-- ###🟢Get movie poster -->
   `GET` */movies/:movie-title*
 *  **Header**
     `Authorization: Bearer {your_token}`
