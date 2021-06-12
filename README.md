@@ -36,7 +36,7 @@
 ## 🎯 API
 * **URL**
 
-
+<br>
 ###🟢Add movie to favourite list
   `POST` */movies/favourite*
   
