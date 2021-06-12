@@ -1,6 +1,5 @@
 # 🎥Favourite Movie API
-<hr>
-  Returns json data about a single user.
+
 ## 📦 Installation
 * **Install Node Modules:**
 
