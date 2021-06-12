@@ -82,8 +82,9 @@
  
 * **Error Response:**
 
-  * **Code:** 403 Forbidden <br />
-###Get movie poster
+  * **Code:** 403 Forbidden 
+
+###🟢Get movie poster
   `GET` */movies/:movie-title*
 *  **Header**
     `Authorization: Bearer {your_token}`
@@ -115,7 +116,7 @@
             "msg": "Image poster not found"
         }
 
-<br>
+
 ### 🟢Get users favourite movie
   `GET` */movies/favourite*
 *  **Header**
@@ -142,5 +143,5 @@
  
 * **Error Response:**
 
-  * **Code:** 403 Forbidden <br />
+  * **Code:** 403 Forbidden 
   
