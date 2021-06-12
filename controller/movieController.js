@@ -17,7 +17,7 @@ module.exports = {
         .then(data => {
             console.log()
             if("Error" in data.data){
-                return res.status(200).json({
+                return res.status(404).json({
                     msg:"Image poster not found"
                 })
             }
@@ -34,6 +34,7 @@ module.exports = {
     getAll:async(req,res)=>{
         const movie = await Movie.findAll({raw:true})
         let imagePoster = []
+        
         for(i=0;i<movie.length;i++){
             let data = await axios.get(`http://www.omdbapi.com/?s=${movie[i].title}&apikey=aae0678a`)
             if("Error" in data.data){

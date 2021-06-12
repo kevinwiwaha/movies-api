@@ -11,6 +11,15 @@ const userLogin = async (req,res,next)=>{
         where:{name}
     })
     if(result !== null){
+        let cookie = req.cookies;
+        if (cookie === undefined) {
+            let randomNumber=Math.random().toString();
+            randomNumber=randomNumber.substring(2,randomNumber.length);
+            res.cookie('cookieName',randomNumber, { maxAge: 900000, httpOnly: true });
+            console.log('cookie created successfully');
+        } else {
+            console.log('cookie exists', cookie);
+        } 
         const token = jwt.sign(result.toJSON(),PRIVATE_KEY)
         const userData = result.toJSON()
         bcrypt.compare(password, userData.password,function(err,status){
@@ -20,23 +29,31 @@ const userLogin = async (req,res,next)=>{
                 req.user = userData
                 next()
             }else if(status !== true){
-                res.sendStatus(401)
+                res.sendStatus(403)
             }
 
             
         })
         
     }else if(result == null){
-        res.sendStatus(401)
+        res.sendStatus(403)
     }
    
 }
 const userVerify = (req,res,next) => {
-    
+    let cookie = req.cookies;
+        if (cookie === undefined) {
+            let randomNumber=Math.random().toString();
+            randomNumber=randomNumber.substring(2,randomNumber.length);
+            res.cookie('cookieName',randomNumber, { maxAge: 900000, httpOnly: true });
+            console.log('cookie created successfully');
+        } else {
+            console.log('cookie exists', cookie);
+        } 
     const token = req.headers.authorization
             if(token != null){
                 jwt.verify(token.split(" ")[1],PRIVATE_KEY,function(err,user){
-                    if(err) return res.status(401).json({err})
+                    if(err) return res.status(403).json({err})
                     req.user = user
                     return next()
                 })
