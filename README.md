@@ -1,5 +1,6 @@
 # 🎥Favourite Movie API
-
+___
+Returns json data about a single user.
 ## 📦 Installation
 * **Install Node Modules:**
 
@@ -17,12 +18,12 @@
 * **Run Server**
   ```shell
     npm run start
-<br>
+___
 ## 🎯 API
 * **URL**
 
 
-### Login
+### 👉 Login
   `POST` */login/*
   
 *  **Body**
@@ -57,7 +58,7 @@
 
 
 
-### Add movie to favourite list
+### 👉Add movie to favourite list
   `POST` */movies/favourite*
   
 *  **Body**
@@ -87,7 +88,7 @@
 * **Error Response:**
 
   * **Code:** 403 Forbidden <br />
-### Get movie poster
+### 👉Get movie poster
   `GET` */movies/:movie-title*
 *  **Header**
     `Authorization: Bearer {your_token}`
@@ -118,7 +119,7 @@
         {
             "msg": "Image poster not found"
         }
-### Get users favourite movie
+### 👉Get users favourite movie
   `GET` */movies/favourite*
 *  **Header**
     `Authorization: Bearer {your_token}`
