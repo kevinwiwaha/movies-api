@@ -20,7 +20,7 @@ Returns json data about a single user.
     npm run start
 ___
 ## 🎯 API
-* **URL**
+
 
 
 ### 👉 Login
