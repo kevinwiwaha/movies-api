@@ -15,6 +15,12 @@ Returns json data about a single user.
             DB_PASSWORD= 
             DB_NAME= 
             PRIVATE_KEY=b1e0c2ef1081ef29b1614e4d428ba4d96f0a40adda93179c450f265a9d5e9fa7967959dff385375fde313aa41b2a282822784e243ca7a079989973cdc9ba88d0
+* **Migration**
+  ```shell
+    npx sequelize db:migrate:all
+* **Seeder**
+  ```shell
+    npx sequelize db:seed:all
 * **Run Server**
   ```shell
     npm run start
