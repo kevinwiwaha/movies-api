@@ -29,6 +29,34 @@ ___
 
 
 
+### 👉 User Register
+  `POST` */register/*
+  
+*  **Body**
+ 
+   ```javascript
+        {
+            "name":"masjono",
+            "password":"rahasia"
+        }
+<br>
+
+* **Success Response:**
+
+  * **Code:** 200 Success
+    **Content:**
+    ```javascript
+        
+       {
+          "user": {
+            "id": 4,
+            "name": "masjono",
+            "password": "$2b$10$eG1b7EncrLkFPcrzWAiaQeXu1O03DjaXe8T9ZLrFr29o5Lj0l.MPG",
+            "updatedAt": "2021-06-16T07:17:17.939Z",
+            "createdAt": "2021-06-16T07:17:17.939Z"
+          },
+          "status": "User succesfully registerd"
+        }
 ### 👉 Login
   `POST` */login/*
   
